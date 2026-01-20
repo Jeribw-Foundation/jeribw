@@ -1,11 +1,20 @@
-app/layout.tsx
-export default function HomePage() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "JERIBW Family News",
+  description: "Global family-focused news and intelligence platform",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>JERIBW Family News</h1>
-      <p>
-        Calm, verified information and real help for families worldwide.
-      </p>
-    </main>
+    <html lang="en">
+      <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
+        {children}
+      </body>
+    </html>
   );
 }

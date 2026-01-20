@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "JERIBW Family News",
-  description: "Global family-focused news and intelligence platform",
+  description: "Calm, verified information and real help for families worldwide",
 };
 
 export default function RootLayout({

@@ -18,4 +18,3 @@ export default function RootLayout({
     </html>
   );
 }
-<p>Live platform — version 1</p>

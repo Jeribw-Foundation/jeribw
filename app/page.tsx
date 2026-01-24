@@ -6,6 +6,12 @@ export default function HomePage() {
       <p>
         Live. Verified. Built for families worldwide.
       </p>
+
+      <hr style={{ margin: "2rem 0" }} />
+
+      <p style={{ fontSize: "0.9rem", opacity: 0.7 }}>
+        Live platform — version 1
+      </p>
     </main>
   );
 }

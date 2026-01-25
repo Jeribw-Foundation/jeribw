@@ -18,6 +18,9 @@ export default function HomePage() {
 <p style={{ fontSize: "0.9rem", opacity: 0.6 }}>
 JERIBW is a calm information platform for families worldwide. Version 1.0 live.
 </p>  
+   <p style={{ fontSize: "0.9rem" }}>
+Contact: <a href="mailto:help@jeribw.org">help@jeribw.org</a>
+</p>   
       </main>
     </>
   );

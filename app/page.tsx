@@ -1,3 +1,4 @@
+import CrisisAlert from "@/components/CrisisAlert";
 export default function HomePage() {
   return (
     <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
@@ -13,5 +14,6 @@ export default function HomePage() {
         Live platform — version 1
       </p>
     </main>
+ <CrisisAlert />
   );
 }

@@ -1,5 +1,4 @@
-import CrisisAlert from "@/components/CrisisAlert";
-
+import CrisisAlert from "../components/CrisisAlert";
 export default function HomePage() {
   return (
     <>

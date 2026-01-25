@@ -1,34 +1,26 @@
 export default function WelcomeBrief() {
   return (
-    <main style={{ padding: "2rem", fontFamily: "sans-serif", maxWidth: "800px" }}>
-      <h1>Welcome — A Message to Families</h1>
+    <main style={{ padding: "2rem", maxWidth: "700px" }}>
+      <h1>Welcome to JERIBW</h1>
 
+      <p><strong>What’s happening:</strong></p>
       <p>
-        We built this platform because families everywhere deserve calm, verified
-        information — not noise.
+Families across the world are facing rising costs, uncertainty, and fragmented information.
+JERIBW exists to bring calm, verified clarity.
       </p>
 
+      <p><strong>Why it matters:</strong></p>
       <p>
-        This is not breaking news. This is steady guidance.
+Strong families require trustworthy information and real support pathways.
+Without it, stress becomes crisis.
       </p>
 
-      <p>
-        Our mission is simple: help families understand what matters, access real
-        resources, and move forward with clarity.
-      </p>
-
-      <h2>What Comes Next</h2>
-
+      <p><strong>What families can do:</strong></p>
       <ul>
-        <li>Verified family briefs</li>
-        <li>Country-based resources</li>
-        <li>Crisis alerts when necessary</li>
-        <li>Human-centered reporting</li>
+        <li>Use Resources to find verified support</li>
+        <li>Follow Family Briefs for calm updates</li>
+        <li>Share JERIBW with those in need</li>
       </ul>
-
-      <p style={{ marginTop: "2rem", fontWeight: "bold" }}>
-        You are not alone. We are building this together.
-      </p>
     </main>
   );
 }

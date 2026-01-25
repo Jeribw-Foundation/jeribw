@@ -1,4 +1,4 @@
-import { crisisActive, crisisHeadline } from "@/data/crisis";
+import { crisisActive, crisisHeadline, crisisDetails } from "../data/crisis";
 import Link from "next/link";
 
 export default function CrisisAlert() {
@@ -16,6 +16,7 @@ export default function CrisisAlert() {
     >
       <Link href="/crisis" style={{ color: "white", textDecoration: "underline" }}>
         ⚠️ {crisisHeadline}
+        <p>{crisisDetails}</p>
       </Link>
     </div>
   );

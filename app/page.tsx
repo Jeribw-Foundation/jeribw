@@ -10,6 +10,9 @@ export default function HomePage() {
         <p>
           Live. Verified. Built for families worldwide.
         </p>
+     <p>
+  <a href="/help">Request Help</a>
+</p>
       </main>
     </>
   );

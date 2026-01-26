@@ -7,9 +7,10 @@ export default function HomePage() {
       <main style={{ padding: "3rem 2rem" }}>
         <h1>JERIBW</h1>
 
-        <p>
-          Live. Verified. Built for families worldwide.
-        </p>
+<p>
+  Calm, verified information and family-first guidance — helping households
+  everywhere navigate uncertainty with clarity, dignity, and support.
+</p>
      <p>
   <a href="/help">Request Help</a>
 </p>

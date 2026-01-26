@@ -4,7 +4,7 @@ export default function HomePage() {
     <>
       <CrisisAlert />
 
-      <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+      <main style={{ padding: "3rem 2rem" }}>
         <h1>JERIBW</h1>
 
         <p>

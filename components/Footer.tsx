@@ -1,39 +1,44 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#1C1C1C] text-[#F4F1EC] py-10 px-6">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    <footer
+      style={{
+        marginTop: "4rem",
+        padding: "2rem",
+        borderTop: "1px solid #ddd",
+        fontFamily: "system-ui, sans-serif",
+      }}
+    >
+      <h3>JERIBW Family News</h3>
 
-        <div>
-          <h3 className="font-semibold mb-2">JERIBW Family News</h3>
-          <p className="text-sm">
-            Calm, verified information for families worldwide.
-          </p>
+      <p>Calm, verified information for families worldwide.</p>
 
-          <p className="text-sm mt-3">
-            Contact:{" "}
-            <a href="mailto:family@jeribw.org" className="underline">
-              family@jeribw.org
-            </a>
-          </p>
-        </div>
+      <p>
+        Contact:{" "}
+        <a href="mailto:family@jeribw.org">family@jeribw.org</a>
+      </p>
 
-        <div className="text-sm space-y-2">
-          <a href="/start" className="block hover:underline">Start Here</a>
-          <a href="/resources" className="block hover:underline">Resources</a>
-          <a href="/briefs" className="block hover:underline">Family Briefs</a>
-          <a href="/help" className="block hover:underline">Help</a>
-        </div>
+      <nav style={{ marginTop: "1rem", marginBottom: "1rem" }}>
+        <a href="/" style={{ marginRight: "1rem" }}>
+          Start Here
+        </a>
 
-        <div className="text-sm space-y-2">
-          <p className="font-semibold">Region (coming soon)</p>
-          <p>Global</p>
+        <a href="/resources" style={{ marginRight: "1rem" }}>
+          Resources
+        </a>
 
-          <p className="mt-4 text-xs opacity-70">
-            © {new Date().getFullYear()} JERIBW Family News. All rights reserved.
-          </p>
-        </div>
+        <a href="/briefs" style={{ marginRight: "1rem" }}>
+          Family Briefs
+        </a>
 
-      </div>
+        <a href="/help">Help</a>
+      </nav>
+
+      <p>Region (coming soon)</p>
+      <p>Global</p>
+
+      <small>
+        © 2026 JERIBW Family News. All rights reserved.
+      </small>
     </footer>
   );
 }

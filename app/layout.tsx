@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Footer from "../components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "JERIBW Family News",

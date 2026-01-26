@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "JERIBW Family News",
@@ -12,9 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
-        {children}
-      </body>
+<body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
+  {children}
+  <Footer />
+</body>
     </html>
   );
 }

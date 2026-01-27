@@ -12,7 +12,6 @@ export default function Header() {
       }}
     >
       <div
-        className="header-inner"
         style={{
           maxWidth: "72rem",
           margin: "0 auto",
@@ -21,11 +20,7 @@ export default function Header() {
       >
         <div className="header-row">
           <Link href="/">
-            <img
-              src="/logo/logo.svg"
-              alt="JERIBW"
-              className="logo"
-            />
+            <img src="/logo/logo.svg" alt="JERIBW" className="logo" />
           </Link>
 
           <nav className="nav">
@@ -36,40 +31,6 @@ export default function Header() {
           </nav>
         </div>
       </div>
-
-      <style jsx>{`
-        .header-row {
-          height: 72px;
-          display: flex;
-          align-items: center;
-          gap: 38px;
-        }
-
-        .logo {
-          height: 52px;
-        }
-
-        .nav {
-          display: flex;
-          gap: 0.8rem;
-          font-size: 0.75rem;
-          letter-spacing: 0.08em;
-        }
-
-        /* MOBILE */
-        @media (max-width: 640px) {
-          .header-row {
-            flex-direction: column;
-            height: auto;
-            padding: 12px 0;
-          }
-
-          .nav {
-            font-size: 0.7rem;
-            gap: 0.6rem;
-          }
-        }
-      `}</style>
     </header>
   );
 }

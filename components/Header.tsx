@@ -12,44 +12,64 @@ export default function Header() {
       }}
     >
       <div
+        className="header-inner"
         style={{
           maxWidth: "72rem",
           margin: "0 auto",
           padding: "0 1.5rem",
-          height: "72px",
-          display: "flex",
-          alignItems: "center",
-          gap: "38px",
         }}
       >
-        {/* LOGO */}
-        <Link href="/">
-          <img
-            src="/logo/logo.svg"
-            alt="JERIBW"
-            style={{
-              height: "52px",
-              display: "block",
-            }}
-          />
-        </Link>
+        <div className="header-row">
+          <Link href="/">
+            <img
+              src="/logo/logo.svg"
+              alt="JERIBW"
+              className="logo"
+            />
+          </Link>
 
-        {/* NAV */}
-        <nav
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "0.8rem",
-            fontSize: "0.75rem",
-            letterSpacing: "0.08em",
-          }}
-        >
-          <Link href="/start">Start Here</Link>
-          <Link href="/resources">Resources</Link>
-          <Link href="/briefs">Family Briefs</Link>
-          <Link href="/help">Help</Link>
-        </nav>
+          <nav className="nav">
+            <Link href="/start">Start Here</Link>
+            <Link href="/resources">Resources</Link>
+            <Link href="/briefs">Family Briefs</Link>
+            <Link href="/help">Help</Link>
+          </nav>
+        </div>
       </div>
+
+      <style jsx>{`
+        .header-row {
+          height: 72px;
+          display: flex;
+          align-items: center;
+          gap: 38px;
+        }
+
+        .logo {
+          height: 52px;
+        }
+
+        .nav {
+          display: flex;
+          gap: 0.8rem;
+          font-size: 0.75rem;
+          letter-spacing: 0.08em;
+        }
+
+        /* MOBILE */
+        @media (max-width: 640px) {
+          .header-row {
+            flex-direction: column;
+            height: auto;
+            padding: 12px 0;
+          }
+
+          .nav {
+            font-size: 0.7rem;
+            gap: 0.6rem;
+          }
+        }
+      `}</style>
     </header>
   );
 }

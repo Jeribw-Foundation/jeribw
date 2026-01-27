@@ -1,31 +1,48 @@
-.header-row {
+.site-header {
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   height: 72px;
   display: flex;
   align-items: center;
-  gap: 38px;
+  justify-content: space-between;
 }
 
-.logo {
-  height: 52px;
+.site-logo {
+  height: 48px; /* desktop size */
 }
 
-.nav {
+.site-nav {
   display: flex;
-  gap: 0.8rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  gap: 24px;
+  font-size: 14px;
 }
 
-/* Mobile */
+/* MOBILE */
+
 @media (max-width: 640px) {
-  .header-row {
+  .header-inner {
     flex-direction: column;
+    align-items: flex-start;
     height: auto;
-    padding: 12px 0;
+    padding: 0.75rem 1.5rem;
+    gap: 8px;
   }
 
-  .nav {
-    font-size: 0.7rem;
-    gap: 0.6rem;
+  .site-logo {
+    height: 42px; /* slightly smaller */
+  }
+
+  .site-nav {
+    font-size: 12px;
+    gap: 14px;
   }
 }

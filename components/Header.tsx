@@ -14,7 +14,14 @@ export default function Header() {
         />
       </Link>
 
-      <nav className="flex gap-6 text-sm">
+      <nav
+  style={{
+    display: "flex",
+    gap: "1.25rem",
+    fontSize: "0.65rem",
+    alignItems: "center"
+  }}
+>
         <Link href="/start">Start Here</Link>
         <Link href="/resources">Resources</Link>
         <Link href="/briefs">Family Briefs</Link>

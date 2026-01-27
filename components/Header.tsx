@@ -15,15 +15,34 @@ export default function Header() {
         style={{
           maxWidth: "72rem",
           margin: "0 auto",
-          padding: "0 1.5rem",
+          padding: "0 1.25rem", // aligns with footer
         }}
       >
-        <div className="header-row">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            height: "64px",
+          }}
+        >
           <Link href="/">
-            <img src="/logo/logo.svg" alt="JERIBW" className="logo" />
+            <img
+              src="/logo/logo.svg"
+              alt="JERIBW"
+              style={{
+                height: "36px",
+              }}
+            />
           </Link>
 
-          <nav className="nav">
+          <nav
+            style={{
+              display: "flex",
+              gap: "14px",
+              fontSize: "12px",
+            }}
+          >
             <Link href="/start">Start Here</Link>
             <Link href="/resources">Resources</Link>
             <Link href="/briefs">Family Briefs</Link>

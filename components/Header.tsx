@@ -4,10 +4,6 @@ export default function Header() {
   return (
     <header
       style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "64px",
         background: "white",
         boxShadow: "0 1px 2px rgba(0,0,0,.05)",
         position: "sticky",
@@ -15,12 +11,15 @@ export default function Header() {
         zIndex: 50,
       }}
     >
-      {/* INNER ROW */}
       <div
         style={{
+          maxWidth: "72rem",
+          margin: "0 auto",
+          padding: "0 1.5rem",
+          height: "72px",
           display: "flex",
           alignItems: "center",
-          gap: "38px", // ~1cm space between logo + links
+          gap: "38px",
         }}
       >
         {/* LOGO */}
@@ -29,7 +28,7 @@ export default function Header() {
             src="/logo/logo.svg"
             alt="JERIBW"
             style={{
-              height: "36px",
+              height: "52px",
               display: "block",
             }}
           />
@@ -40,8 +39,8 @@ export default function Header() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "0.6rem",
-            fontSize: "0.45rem",
+            gap: "0.8rem",
+            fontSize: "0.75rem",
             letterSpacing: "0.08em",
           }}
         >

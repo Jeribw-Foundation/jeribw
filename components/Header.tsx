@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-white shadow-sm sticky top-0 z-50">
       <Link href="/" className="flex items-center gap-3">
-        <img
-  src="/logo/logo.svg?v=2"
-  alt="JERIBW"
-  className="h-10 w-auto"
-/>
+        <Image
+          src="/logo/logo.svg"
+          alt="JERIBW"
+          width={120}
+          height={40}
+          priority
+        />
       </Link>
 
       <nav className="flex gap-6 text-sm">

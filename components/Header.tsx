@@ -1,61 +1,67 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 640);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
   return (
-    <header
-      style={{
-        background: "white",
-        boxShadow: "0 1px 2px rgba(0,0,0,.05)",
-        position: "sticky",
-        top: 0,
-        zIndex: 50,
-      }}
-    >
-      <div
+    <>
+      <header
         style={{
-          maxWidth: "72rem",
-          margin: "0 auto",
-          padding: "0 1.5rem",
-          display: "flex",
-          alignItems: "center",
+          background: "white",
+          boxShadow: "0 1px 2px rgba(0,0,0,.05)",
+          position: "sticky",
+          top: 0,
+          zIndex: 50,
         }}
       >
-        <Link href="/">
-          <img
-            src="/logo/logo.svg"
-            alt="JERIBW"
-            style={{ height: "48px" }}
-          />
-        </Link>
-
-        <nav
+        <div
           style={{
-            marginLeft: "20px",
+            maxWidth: "72rem",
+            margin: "0 auto",
+            padding: "8px 1.5rem",
             display: "flex",
-            gap: "1rem",
-            fontSize: isMobile ? "0.8rem" : "0.95rem",
             alignItems: "center",
-            flexWrap: "wrap",
           }}
         >
-          <Link href="/start">Start Here</Link>
-          <Link href="/resources">Resources</Link>
-          <Link href="/briefs">Family Briefs</Link>
-          <Link href="/help">Help</Link>
-        </nav>
-      </div>
-    </header>
+          {/* Logo — untouched */}
+          <Link href="/">
+            <img
+              src="/logo/logo.svg"
+              alt="JERIBW"
+              style={{
+                height: "64px",
+                width: "auto",
+                display: "block",
+              }}
+            />
+          </Link>
+
+          {/* Navigation */}
+          <nav
+            className="main-nav"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "1.25rem",
+              marginLeft: "20px",
+              fontSize: "0.95rem",
+              flexWrap: "wrap",
+            }}
+          >
+            <Link href="/start">Start Here</Link>
+            <Link href="/resources">Resources</Link>
+            <Link href="/briefs">Family Briefs</Link>
+            <Link href="/help">Help</Link>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hide links on mobile only */}
+      <style>{`
+        @media (max-width: 640px) {
+          .main-nav {
+            display: none !important;
+          }
+        }
+      `}</style>
+    </>
   );
 }

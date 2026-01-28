@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <header
       style={{
@@ -15,49 +27,35 @@ export default function Header() {
         style={{
           maxWidth: "72rem",
           margin: "0 auto",
-          padding: "8px 1.5rem",
+          padding: "0 1.5rem",
           display: "flex",
           alignItems: "center",
         }}
       >
-        {/* Logo */}
         <Link href="/">
           <img
             src="/logo/logo.svg"
             alt="JERIBW"
-            style={{
-              height: "64px",
-              width: "auto",
-              display: "block",
-            }}
+            style={{ height: "48px" }}
           />
         </Link>
 
-        {/* Navigation */}
         <nav
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "1.25rem",
-    marginLeft: "20px",
-    fontSize: "0.95rem",
-    flexWrap: "wrap",
-  }}
-  className="header-nav"
->
+          style={{
+            marginLeft: "20px",
+            display: "flex",
+            gap: "1rem",
+            fontSize: isMobile ? "0.8rem" : "0.95rem",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
           <Link href="/start">Start Here</Link>
           <Link href="/resources">Resources</Link>
           <Link href="/briefs">Family Briefs</Link>
           <Link href="/help">Help</Link>
         </nav>
       </div>
-    <style jsx>{`
-  @media (max-width: 640px) {
-    .header-nav {
-      font-size: 0.8rem;
-    }
-  }
-`}</style>
     </header>
   );
 }

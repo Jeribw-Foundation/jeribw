@@ -2,13 +2,48 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="site-header">
-      <div className="header-inner">
-        <Link href="/" className="logo-wrap">
-          <img src="/logo/logo.svg" alt="JERIBW" className="logo" />
+    <header
+      style={{
+        background: "white",
+        boxShadow: "0 1px 2px rgba(0,0,0,.05)",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "72rem",
+          margin: "0 auto",
+          padding: "8px 1.5rem",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        {/* Logo */}
+        <Link href="/">
+          <img
+            src="/logo/logo.svg"
+            alt="JERIBW"
+            style={{
+              height: "64px",
+              width: "auto",
+              display: "block",
+            }}
+          />
         </Link>
 
-        <nav className="nav">
+        {/* Navigation */}
+        <nav
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "1.25rem",
+            marginLeft: "20px",
+            fontSize: "0.95rem",
+            flexWrap: "wrap",
+          }}
+        >
           <Link href="/start">Start Here</Link>
           <Link href="/resources">Resources</Link>
           <Link href="/briefs">Family Briefs</Link>

@@ -35,21 +35,29 @@ export default function Header() {
 
         {/* Navigation */}
         <nav
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "1.25rem",
-            marginLeft: "20px",
-            fontSize: "0.95rem",
-            flexWrap: "wrap",
-          }}
-        >
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1.25rem",
+    marginLeft: "20px",
+    fontSize: "0.95rem",
+    flexWrap: "wrap",
+  }}
+  className="header-nav"
+>
           <Link href="/start">Start Here</Link>
           <Link href="/resources">Resources</Link>
           <Link href="/briefs">Family Briefs</Link>
           <Link href="/help">Help</Link>
         </nav>
       </div>
+    <style jsx>{`
+  @media (max-width: 640px) {
+    .header-nav {
+      font-size: 0.8rem;
+    }
+  }
+`}</style>
     </header>
   );
 }

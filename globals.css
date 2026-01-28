@@ -11,22 +11,27 @@
 .header-inner {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 12px 1.5rem;
+  padding: 8px 1.5rem;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
+/* LOGO */
 .logo {
-  height: 48px;
+  height: 64px;
   width: auto;
+  display: block;
 }
 
+/* NAV */
 .nav {
   display: flex;
+  align-items: center;
   gap: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  margin-left: 20px; /* ~0.5cm from logo */
 }
 
 .nav a {
@@ -37,7 +42,8 @@
 @media (max-width: 640px) {
   .header-inner {
     flex-direction: column;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 6px;
   }
 
   .logo {
@@ -45,7 +51,8 @@
   }
 
   .nav {
-    justify-content: center;
+    margin-left: 0;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 0.75rem;
     font-size: 0.8rem;

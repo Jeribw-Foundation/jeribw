@@ -37,23 +37,27 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="community-section">
-          <h2>You’re Not Alone</h2>
+        <section>
+          <div className="container">
+            <div className="community-section">
+              <h2>You’re Not Alone</h2>
 
-          <p>
-            Families around the world are navigating uncertainty right now.
-            JERIBW exists to share calm information, practical guidance, and quiet solidarity.
-          </p>
+              <p>
+                Families around the world are navigating uncertainty right now.
+                JERIBW exists to share calm information, practical guidance, and quiet solidarity.
+              </p>
 
-          <p>
-            We’re building a global family network — one region at a time.
-          </p>
+              <p>
+                We’re building a global family network — one region at a time.
+              </p>
 
-          <div className="image-placeholder"></div>
+              <div className="image-placeholder"></div>
 
-          <p>
-            Coming soon: regional family circles and shared support spaces.
-          </p>
+              <p>
+                Coming soon: regional family circles and shared support spaces.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section>

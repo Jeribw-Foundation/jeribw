@@ -1,4 +1,4 @@
-/* ================= BRAND VARIABLES ================= */ 
+/* ================= BRAND VARIABLES ================= */
 
 :root {
   --charcoal: #111111;
@@ -36,15 +36,13 @@ h1 {
   margin-bottom: 0.75rem;
 }
 
-/* SUB-HEADINGS REDUCED */
-
 h2 {
-  font-size: 1.125rem; /* ~18px */
+  font-size: 1.125rem;
   margin: 2rem 0 0.75rem;
 }
 
 h3 {
-  font-size: 1rem; /* ~16px */
+  font-size: 1rem;
   margin: 1.5rem 0 0.5rem;
 }
 
@@ -76,15 +74,12 @@ a {
   max-width: 72rem;
   margin: 0 auto;
   padding: 12px 1.5rem;
-
   display: flex;
   align-items: center;
 }
 
 .logo {
   height: 64px;
-  width: auto;
-  display: block;
 }
 
 .nav {
@@ -98,19 +93,7 @@ a {
   white-space: nowrap;
 }
 
-/* ===== MOBILE ===== */
-
-@media (max-width: 640px) {
-  .nav {
-    display: none;
-  }
-
-  .logo {
-    height: 64px;
-  }
-}
-
-/* ================= FOOTER ALIGNMENT ================= */
+/* ================= FOOTER ================= */
 
 footer {
   max-width: 72rem;
@@ -118,25 +101,30 @@ footer {
   padding: 2rem 1.5rem;
 }
 
-/* ================= CONTENT SECTIONS ================= */
+/* ================= LAYOUT CORE ================= */
 
-section {
-  padding: 3rem 1.5rem;
-}
+/* Single source of horizontal alignment */
 
 .container {
   max-width: 72rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* REMOVE side padding from sections */
+
+section {
+  padding: 3rem 0;
 }
 
 /* ================= COMMUNITY BLOCK ================= */
 
 .community-section {
   background: white;
-  padding: 3rem 2rem;
   border-radius: 8px;
   margin: 3rem auto;
   max-width: 72rem;
+  padding: 3rem 1.5rem;
 }
 
 /* ================= IMAGE PLACEHOLDER ================= */
@@ -164,4 +152,12 @@ button {
 
 .center {
   text-align: center;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 640px) {
+  .nav {
+    display: none;
+  }
 }

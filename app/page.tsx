@@ -26,37 +26,32 @@ export default function HomePage() {
             <h2>What We Provide</h2>
 
             <p>
-              • Family Briefs — simple explanations of current events  
-              <br />
-              • Crisis guidance — practical steps when situations escalate  
-              <br />
-              • Regional resources — verified help by location  
-              <br />
+              • Family Briefs — simple explanations of current events<br />
+              • Crisis guidance — practical steps when situations escalate<br />
+              • Regional resources — verified help by location<br />
               • Calm updates — no sensational headlines
             </p>
           </div>
         </section>
 
         <section>
-          <div className="container">
-            <div className="community-section">
-              <h2>You’re Not Alone</h2>
+          <div className="container community-section">
+            <h2>You’re Not Alone</h2>
 
-              <p>
-                Families around the world are navigating uncertainty right now.
-                JERIBW exists to share calm information, practical guidance, and quiet solidarity.
-              </p>
+            <p>
+              Families around the world are navigating uncertainty right now.
+              JERIBW exists to share calm information, practical guidance, and quiet solidarity.
+            </p>
 
-              <p>
-                We’re building a global family network — one region at a time.
-              </p>
+            <p>
+              We’re building a global family network — one region at a time.
+            </p>
 
-              <div className="image-placeholder"></div>
+            <div className="image-placeholder"></div>
 
-              <p>
-                Coming soon: regional family circles and shared support spaces.
-              </p>
-            </div>
+            <p>
+              Coming soon: regional family circles and shared support spaces.
+            </p>
           </div>
         </section>
 

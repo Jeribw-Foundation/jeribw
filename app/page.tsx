@@ -1,80 +1,67 @@
-import CrisisAlert from "../components/CrisisAlert";
+import Link from "next/link";
 
-export default function HomePage() {
+export default function Header() {
   return (
     <>
-      <CrisisAlert />
+      <header
+        style={{
+          background: "white",
+          boxShadow: "0 1px 2px rgba(0,0,0,.05)",
+          position: "sticky",
+          top: 0,
+          zIndex: 50,
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "72rem",
+            margin: "0 auto",
+            padding: "8px 1.5rem",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          {/* Logo — untouched */}
+          <Link href="/">
+            <img
+              src="/logo/logo.svg"
+              alt="JERIBW"
+              style={{
+                height: "64px",
+                width: "auto",
+                display: "block",
+              }}
+            />
+          </Link>
 
-      <main>
+          {/* Navigation */}
+          <nav
+            className="main-nav"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "1.25rem",
+              marginLeft: "20px",
+              fontSize: "0.95rem",
+              flexWrap: "wrap",
+            }}
+          >
+            <Link href="/start">Start Here</Link>
+            <Link href="/resources">Resources</Link>
+            <Link href="/briefs">Family Briefs</Link>
+            <Link href="/help">Help</Link>
+          </nav>
+        </div>
+      </header>
 
-        {/* HERO */}
-        <section>
-          <div className="container">
-            <h1>JERIBW</h1>
-
-            <p>
-              Calm, verified information and family-first guidance — helping households
-              everywhere navigate uncertainty with clarity, dignity, and support.
-            </p>
-
-            <p>
-              <a href="/help">Request Help</a>
-            </p>
-          </div>
-        </section>
-
-        {/* WHAT WE PROVIDE */}
-        <section>
-          <div className="container">
-            <h2>What We Provide</h2>
-
-            <p>
-              • Family Briefs — simple explanations of current events<br />
-              • Crisis guidance — practical steps when situations escalate<br />
-              • Regional resources — verified help by location<br />
-              • Calm updates — no sensational headlines
-            </p>
-          </div>
-        </section>
-
-        {/* COMMUNITY */}
-        <section>
-          <div className="container community-section">
-            <h2>You’re Not Alone</h2>
-
-            <p>
-              Families around the world are navigating uncertainty right now.
-              JERIBW exists to share calm information, practical guidance, and quiet solidarity.
-            </p>
-
-            <p>
-              We’re building a global family network — one region at a time.
-            </p>
-
-            <div className="image-placeholder"></div>
-
-            <p>
-              Coming soon: regional family circles and shared support spaces.
-            </p>
-          </div>
-        </section>
-
-        {/* FOOTER TEXT */}
-        <section>
-          <div className="container">
-            <hr style={{ marginTop: "3rem" }} />
-
-            <p style={{ fontSize: "0.9rem", opacity: 0.6 }}>
-              JERIBW is a calm information platform for families worldwide. Version 1.0 live.
-            </p>
-
-            <p style={{ fontSize: "0.9rem" }}>
-              Contact: <a href="mailto:help@jeribw.org">help@jeribw.org</a>
-            </p>
-          </div>
-        </section>
-
-      </main>
+      {/* Hide links on mobile only */}
+      <style>{`
+        @media (max-width: 640px) {
+          .main-nav {
+            display: none !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

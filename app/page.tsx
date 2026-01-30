@@ -26,16 +26,19 @@ export default function HomePage() {
             <h2>What We Provide</h2>
 
             <p>
-              • Family Briefs — simple explanations of current events<br />
-              • Crisis guidance — practical steps when situations escalate<br />
-              • Regional resources — verified help by location<br />
+              • Family Briefs — simple explanations of current events
+              <br />
+              • Crisis guidance — practical steps when situations escalate
+              <br />
+              • Regional resources — verified help by location
+              <br />
               • Calm updates — no sensational headlines
             </p>
           </div>
         </section>
 
-        <section>
-          <div className="container community-section">
+        <section className="community-section">
+          <div className="container">
             <h2>You’re Not Alone</h2>
 
             <p>

@@ -5,42 +5,74 @@ export default function HomePage() {
     <>
       <CrisisAlert />
 
-      <main
-        style={{
-          padding: "3rem 0",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "72rem",
-            margin: "0 auto",
-            padding: "0 1.5rem",
-          }}
-        >
-          <h1>JERIBW</h1>
+      <main>
+        <section>
+          <div className="container">
+            <h1>JERIBW</h1>
 
-          <p>
-            Calm, verified information and family-first guidance — helping
-            households everywhere navigate uncertainty with clarity,
-            dignity, and support.
-          </p>
+            <p>
+              Calm, verified information and family-first guidance — helping households
+              everywhere navigate uncertainty with clarity, dignity, and support.
+            </p>
 
-          <p>
-            <a href="/help">Request Help</a>
-          </p>
+            <p>
+              <a href="/help">Request Help</a>
+            </p>
+          </div>
+        </section>
 
-          <hr style={{ marginTop: "3rem" }} />
+        <section>
+          <div className="container">
+            <h2>What We Provide</h2>
 
-          <p style={{ fontSize: "0.9rem", opacity: 0.6 }}>
-            JERIBW is a calm information platform for families worldwide.
-            Version 1.0 live.
-          </p>
+            <p>
+              • Family Briefs — simple explanations of current events  
+              <br />
+              • Crisis guidance — practical steps when situations escalate  
+              <br />
+              • Regional resources — verified help by location  
+              <br />
+              • Calm updates — no sensational headlines
+            </p>
+          </div>
+        </section>
 
-          <p style={{ fontSize: "0.9rem" }}>
-            Contact:{" "}
-            <a href="mailto:help@jeribw.org">help@jeribw.org</a>
-          </p>
-        </div>
+        <section>
+          <div className="container">
+            <div className="community-section">
+              <h2>You’re Not Alone</h2>
+
+              <p>
+                Families around the world are navigating uncertainty right now.
+                JERIBW exists to share calm information, practical guidance, and quiet solidarity.
+              </p>
+
+              <p>
+                We’re building a global family network — one region at a time.
+              </p>
+
+              <div className="image-placeholder"></div>
+
+              <p>
+                Coming soon: regional family circles and shared support spaces.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="container">
+            <hr style={{ marginTop: "3rem" }} />
+
+            <p style={{ fontSize: "0.9rem", opacity: 0.6 }}>
+              JERIBW is a calm information platform for families worldwide. Version 1.0 live.
+            </p>
+
+            <p style={{ fontSize: "0.9rem" }}>
+              Contact: <a href="mailto:help@jeribw.org">help@jeribw.org</a>
+            </p>
+          </div>
+        </section>
       </main>
     </>
   );

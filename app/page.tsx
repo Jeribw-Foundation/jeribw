@@ -6,8 +6,8 @@ export default function HomePage() {
       <CrisisAlert />
 
       <main>
-        <section>
-          <div className="container">
+        <div className="container">
+          <section>
             <h1>JERIBW</h1>
 
             <p>
@@ -18,41 +18,37 @@ export default function HomePage() {
             <p>
               <a href="/help">Request Help</a>
             </p>
-          </div>
-        </section>
+          </section>
 
-        <section>
-          <div className="container">
+          <section>
             <h2>What We Provide</h2>
 
             <p>Family Briefs — simple explanations of current events</p>
             <p>Crisis guidance — practical steps when situations escalate</p>
             <p>Regional resources — verified help by location</p>
             <p>Calm updates — no sensational headlines</p>
-          </div>
-        </section>
+          </section>
 
-        <section className="community-section">
-          <h2>You’re Not Alone</h2>
+          <section className="community-section">
+            <h2>You’re Not Alone</h2>
 
-          <p>
-            Families around the world are navigating uncertainty right now.
-            JERIBW exists to share calm information, practical guidance, and quiet solidarity.
-          </p>
+            <p>
+              Families around the world are navigating uncertainty right now.
+              JERIBW exists to share calm information, practical guidance, and quiet solidarity.
+            </p>
 
-          <p>
-            We’re building a global family network — one region at a time.
-          </p>
+            <p>
+              We’re building a global family network — one region at a time.
+            </p>
 
-          <div className="image-placeholder"></div>
+            <div className="image-placeholder"></div>
 
-          <p>
-            Coming soon: regional family circles and shared support spaces.
-          </p>
-        </section>
+            <p>
+              Coming soon: regional family circles and shared support spaces.
+            </p>
+          </section>
 
-        <section>
-          <div className="container">
+          <section>
             <hr style={{ marginTop: "3rem" }} />
 
             <p style={{ fontSize: "0.9rem", opacity: 0.6 }}>
@@ -62,8 +58,8 @@ export default function HomePage() {
             <p style={{ fontSize: "0.9rem" }}>
               Contact: <a href="mailto:help@jeribw.org">help@jeribw.org</a>
             </p>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
     </>
   );

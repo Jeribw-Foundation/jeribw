@@ -9,15 +9,21 @@ export default function CrisisAlert() {
       style={{
         background: "#b91c1c",
         color: "white",
-        padding: "12px",
-        textAlign: "center",
+        padding: "12px 0",
         fontWeight: "600",
       }}
     >
-      <Link href="/crisis" style={{ color: "white", textDecoration: "underline" }}>
-        ⚠️ {crisisHeadline}
-        <p>{crisisDetails}</p>
-      </Link>
+      <div className="container">
+        <Link
+          href="/crisis"
+          style={{ color: "white", textDecoration: "underline" }}
+        >
+          ⚠️ {crisisHeadline}
+          <p style={{ margin: "4px 0 0", fontWeight: "400" }}>
+            {crisisDetails}
+          </p>
+        </Link>
+      </div>
     </div>
   );
 }

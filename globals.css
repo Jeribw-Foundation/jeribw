@@ -113,16 +113,16 @@ footer {
 /* ================= SECTIONS ================= */
 
 section {
-  padding: 3rem 1.5rem;
+  padding: 3rem 0rem;
 }
 
 /* ================= COMMUNITY ================= */
 
 .community-section {
   background: white;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   border-radius: 8px;
-  margin: 3rem auto;
+  margin: 0 auto;
   max-width: 72rem;
 }
 

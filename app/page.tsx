@@ -5,8 +5,7 @@ export default function HomePage() {
     <>
       <CrisisAlert />
 
-     <main style={{ padding: "2rem 0" }}>
-       <div className="container">
+     <main style={{ maxWidth: "72rem", margin: "0 auto", padding: "3rem 1.5rem" }}>
 
          <section>
            <h1>JERIBW</h1>
@@ -61,7 +60,6 @@ export default function HomePage() {
             </p>
           </section>
 
-        </div>
       </main>
     </>
   );

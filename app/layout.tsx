@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "JERIBW Family News",
+  title: "JERIBW FAMILY NEWS",
   description: "Calm, verified information and real help for families worldwide.",
 };
 

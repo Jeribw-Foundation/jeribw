@@ -16,7 +16,7 @@ export default function HomePage() {
             </p>
 
             <p>
-              <a href="/help">Request Help</a>
+              <a href="/briefs">Read today’s Family Brief</a>
             </p>
           </section>
 

@@ -16,7 +16,7 @@ export default function HomePage() {
             </p>
 
             <p>
-              <a href="/briefs">Read today’s Family Brief</a>
+              <a href="/briefs/first-family-brief">Read today’s Family Brief</a>
             </p>
           </section>
 

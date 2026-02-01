@@ -8,7 +8,7 @@ export default function Footer() {
         fontFamily: "system-ui, sans-serif",
       }}
     >
-      <h3>JERIBW Family News</h3>
+      <h3>JERIBW FAMILY NEWS</h3>
 
       <p>Calm, verified information for families worldwide.</p>
 

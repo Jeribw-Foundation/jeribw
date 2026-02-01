@@ -4,13 +4,12 @@ export default function HomePage() {
   return (
     <>
       <CrisisAlert />
-
       <main style={{ padding: "3rem 0" }}>
         <section>
           <h1>JERIBW</h1>
 
           <p>
-            Calm, verified information and family-first guidance — helping households
+            Calm, verified information and family-first guidance, helping households
             everywhere navigate uncertainty with clarity, dignity, and support.
           </p>
 
@@ -22,10 +21,10 @@ export default function HomePage() {
         <section>
           <h2>What We Provide</h2>
 
-          <p>Family Briefs — simple explanations of current events</p>
-          <p>Crisis guidance — practical steps when situations escalate</p>
-          <p>Regional resources — verified help by location</p>
-          <p>Calm updates — no sensational headlines</p>
+          <p>.Family Briefs — simple explanations of current events</p>
+          <p>.Crisis guidance — practical steps when situations escalate</p>
+          <p>.Regional resources — verified help by location</p>
+          <p>.Calm updates — no sensational headlines</p>
         </section>
 
         <section className="community-section">
@@ -43,7 +42,7 @@ export default function HomePage() {
           <div className="image-placeholder"></div>
 
           <p>
-            Coming soon: regional family circles and shared support spaces.
+            COMING SOON: regional family circles and shared support spaces.
           </p>
         </section>
 

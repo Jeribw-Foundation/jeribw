@@ -12,15 +12,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
- return (
-  <html lang="en">
-    <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
-      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-  <Header />
-  <main style={{ flex: 1 }}>{children}</main>
-  <Footer />
-</div>
-    </body>
-  </html>
-);
+  return (
+    <html lang="en">
+      <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
+        <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+          <Header />
+
+          {/* GLOBAL CONTENT CONTAINER */}
+          <main style={{ flex: 1 }}>
+            <div className="container">{children}</div>
+          </main>
+
+          <Footer />
+        </div>
+      </body>
+    </html>
+  );
 }

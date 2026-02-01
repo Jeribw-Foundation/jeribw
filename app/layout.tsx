@@ -15,15 +15,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
-        <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+        <div style={{ minHeight: "100vh" }}>
+
+          {/* FULL WIDTH HEADER */}
           <Header />
 
-          {/* GLOBAL CONTENT CONTAINER */}
-          <main style={{ flex: 1 }}>
-            <div className="container">{children}</div>
-          </main>
+          {/* MASTER CONTAINER */}
+          <div className="container">
 
-          <Footer />
+            <main>{children}</main>
+
+            <Footer />
+
+          </div>
         </div>
       </body>
     </html>

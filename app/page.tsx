@@ -6,11 +6,11 @@ export default function HomePage() {
       <CrisisAlert />
 
      <main style={{ maxWidth: "72rem", margin: "0 auto", padding: "3rem 1.5rem" }}>
-     
-     </main>
 
-          <section>
-            <h1>JERIBW</h1>
+       <h1>JERIBW</h1>   
+
+     </main>
+       <section>
 
             <p>
               Calm, verified information and family-first guidance, helping households

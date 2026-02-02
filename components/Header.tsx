@@ -46,6 +46,7 @@ export default function Header() {
               flexWrap: "wrap",
             }}
           >
+            <Link href="/briefs/first-family-brief">Latest Brief</Link>
             <Link href="/start">Start Here</Link>
             <Link href="/resources">Resources</Link>
             <Link href="/briefs">Family Briefs</Link>

@@ -83,6 +83,9 @@ export default function FirstFamilyBrief() {
         <p style={{ marginTop: "1rem" }}>
           <a href="/">← Return to Home</a>
         </p>
+        <p style={{ marginTop: "0.75rem" }}>
+  <a href="/briefs/family-brief-002">Next Family Brief →</a>
+</p>
       </section>
     </main>
   );

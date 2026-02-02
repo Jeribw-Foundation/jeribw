@@ -10,8 +10,9 @@ export default function FirstFamilyBrief() {
       <section>
         <p>
           If you are reading this, you may be feeling uncertain, overwhelmed, or
-          simply looking for clarity. You are not alone. This brief is designed
-          to offer calm perspective and practical guidance.
+          simply looking for clarity. You are not alone. This brief exists to
+          offer calm perspective, steady reassurance, and practical guidance for 
+          families everywhere.
         </p>
       </section>
 
@@ -25,9 +26,9 @@ export default function FirstFamilyBrief() {
         </p>
 
         <p>
-          Many parents report feeling overloaded by constant news, unclear
-          information, and the responsibility of protecting their households
-          without reliable guidance.
+          Many parents are feeling overloaded by constant updates, unclear 
+          information, and the responsibility of protecting their households 
+          without dependable guidance.
         </p>
       </section>
 

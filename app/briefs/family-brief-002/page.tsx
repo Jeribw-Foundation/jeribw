@@ -4,27 +4,33 @@ export default function FamilyBrief002() {
       <h1>Family Brief #002</h1>
 
       <p style={{ opacity: 0.7, fontSize: "0.9rem" }}>
-        Upcoming — JERIBW Family News
+        Published by JERIBW Family News — for households worldwide.
       </p>
 
       <section>
-        <p>
-          This next Family Brief is currently in preparation.
-        </p>
-
-        <p>
-          We are gathering verified information and practical guidance to support
-          households navigating ongoing challenges.
-        </p>
-
-        <p>
-          Please check back soon.
-        </p>
+        <h2>What’s happening</h2>
+        <p>Draft in progress.</p>
       </section>
 
       <section>
-        <p style={{ marginTop: "2rem" }}>
-          <a href="/">← Return to Home</a>
+        <h2>Why this matters</h2>
+        <p>Draft in progress.</p>
+      </section>
+
+      <section>
+        <h2>What families can do</h2>
+        <p>Draft in progress.</p>
+      </section>
+
+      <section>
+        <hr style={{ marginTop: "3rem" }} />
+
+        <p style={{ fontSize: "0.9rem", opacity: 0.6 }}>
+          This Family Brief is part of JERIBW’s calm information initiative.
+        </p>
+
+        <p style={{ marginTop: "1rem" }}>
+          <a href="/briefs">← Back to Family Briefs</a>
         </p>
       </section>
     </main>

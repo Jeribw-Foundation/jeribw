@@ -5,19 +5,29 @@ export default function CrisisAlert() {
   if (!crisisActive) return null;
 
   return (
-    <div style={{ background: "#b91c1c" }}>
+    <div
+      style={{
+        background: "#7f1d1d",
+        color: "white",
+        padding: "1rem 0",
+      }}
+    >
       <div
-        className="container"
         style={{
-          color: "white",
-          padding: "12px 1.5rem",
+          maxWidth: "72rem",
+          margin: "0 auto",
+          padding: "0 1.5rem",
           textAlign: "center",
-          fontWeight: "600",
         }}
       >
-        <Link href="/crisis" style={{ color: "white", textDecoration: "underline" }}>
-          ⚠️ {crisisHeadline}
-          <p>{crisisDetails}</p>
+        <Link href="/crisis" style={{ color: "white", textDecoration: "none" }}>
+          <strong style={{ display: "block", marginBottom: "0.25rem" }}>
+            ⚠️ {crisisHeadline}
+          </strong>
+
+          <span style={{ fontSize: "0.9rem", opacity: 0.9 }}>
+            {crisisDetails}
+          </span>
         </Link>
       </div>
     </div>

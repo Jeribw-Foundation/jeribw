@@ -48,6 +48,19 @@ export default function HomePage() {
             </p>
           </section>
 
+          <section className="community-section center">
+  <h2>Join the Global Family Network</h2>
+
+  <p>
+    Receive calm updates, practical guidance, and quiet reassurance as we grow
+    together across regions.
+  </p>
+
+  <p style={{ opacity: 0.7 }}>
+    Subscription coming soon.
+  </p>
+</section>
+
           <section>
             <hr style={{ marginTop: "3rem" }} />
 

@@ -3,7 +3,13 @@ import Link from "next/link";
 export default function BriefsPage() {
   return (
     <main style={{ padding: "3rem 0" }}>
-      <div className="container">
+      <div
+        style={{
+          maxWidth: "72rem",
+          margin: "0 auto",
+          padding: "0 1.5rem",
+        }}
+      >
         <h1>Family Briefs</h1>
 
         <p>
@@ -27,9 +33,7 @@ export default function BriefsPage() {
             Global uncertainty and what families can do right now.
           </p>
 
-          <Link href="/briefs/first-family-brief">
-            Read Brief →
-          </Link>
+          <Link href="/briefs/first-family-brief">Read Brief →</Link>
         </div>
       </div>
     </main>

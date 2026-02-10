@@ -30,6 +30,8 @@ export default function Footer() {
           Family Briefs
         </a>
 
+        <a href="/pillars">Pillars</a>
+
         <a href="/help">Help</a>
       </nav>
 

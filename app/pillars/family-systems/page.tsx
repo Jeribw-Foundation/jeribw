@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function FamilySystemsPillar() {
   return (
     <main
@@ -11,119 +9,152 @@ export default function FamilySystemsPillar() {
     >
       {/* HERO */}
       <section style={{ marginBottom: "3rem" }}>
-        <h1>The 7 Family Systems That Create Stable Homes</h1>
+        <h1>The 7 Family Systems That Create Stable, Independent Homes</h1>
 
-        <p style={{ fontSize: "1.1rem", opacity: 0.85 }}>
-          Across cultures, income levels, and family structures, stable families
-          are not built on luck — they are built on systems.
+        <p style={{ opacity: 0.8, fontSize: "1.1rem" }}>
+          Families do not thrive by constantly seeking help.  
+          They thrive by building systems that reduce dependence over time.
         </p>
       </section>
 
-      {/* FEATURE IMAGE / VIDEO PLACEHOLDER */}
-      <section
-        style={{
-          background: "#f3f4f6",
-          borderRadius: "12px",
-          height: "360px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginBottom: "3rem",
-        }}
-      >
-        <p style={{ opacity: 0.6 }}>
-          Image or video placeholder (family systems visual)
-        </p>
+      {/* HERO IMAGE / VIDEO */}
+      <section style={{ marginBottom: "3rem" }}>
+        <div
+          style={{
+            width: "100%",
+            height: "360px",
+            background: "#f3f4f6",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#555",
+          }}
+        >
+          Image / Video Placeholder  
+          (Families • Different Cultures • Shared Stability)
+        </div>
       </section>
 
       {/* INTRO */}
       <section>
         <p>
-          Families that thrive are not perfect. They still face pressure,
-          disagreement, financial stress, and uncertainty. What separates them
-          from families that collapse is not motivation — it is structure.
+          Around the world, stable families share one quiet truth:
         </p>
 
         <p>
-          Below are the seven foundational systems that stable families around
-          the world quietly maintain. These systems are not rules. They are
-          anchors — designed to help families stand on their own feet, not
-          depend forever on outside support.
+          They are not constantly returning for rescue.  
+          They are not dependent on endless external intervention.
         </p>
+
+        <p>
+          They build systems that allow them to stand — even when conditions are hard.
+        </p>
+
+        <p>
+          At JERIBW, we focus on systems because systems create:
+        </p>
+
+        <ul>
+          <li>Stability instead of survival mode</li>
+          <li>Independence instead of long-term dependence</li>
+          <li>Capacity to help others once steady</li>
+        </ul>
       </section>
 
-      {/* SYSTEM LIST */}
-      <section style={{ marginTop: "3rem" }}>
+      {/* SYSTEMS */}
+      <section>
         <h2>The 7 Founding Family Systems</h2>
 
-        <ol>
-          <li>
-            <strong>Communication System</strong> — how families speak, listen,
-            and repair.
-          </li>
-          <li>
-            <strong>Time System</strong> — how priorities are protected.
-          </li>
-          <li>
-            <strong>Financial System</strong> — how money supports stability,
-            not anxiety.
-          </li>
-          <li>
-            <strong>Conflict System</strong> — how disagreements are contained
-            without damage.
-          </li>
-          <li>
-            <strong>Care & Well-Being System</strong> — how health and emotional
-            load are managed.
-          </li>
-          <li>
-            <strong>Leadership System</strong> — how responsibility and
-            direction are provided.
-          </li>
-          <li>
-            <strong>Community System</strong> — how families stay connected and
-            supported.
-          </li>
-        </ol>
+        <p style={{ opacity: 0.75 }}>
+          These systems are not cultural, religious, or income-based.  
+          They appear consistently in stable families worldwide.
+        </p>
+
+        <h3>1. Communication System</h3>
+        <p>
+          Stable families do not communicate perfectly — they communicate predictably.
+          Issues are addressed, repaired, and contained.
+        </p>
+
+        <h3>2. Time System</h3>
+        <p>
+          Time is protected intentionally.  
+          Shared moments are prioritized over constant availability.
+        </p>
+
+        <h3>3. Financial System</h3>
+        <p>
+          Money is discussed openly.  
+          Decisions are made based on needs, not pressure or appearance.
+        </p>
+
+        <h3>4. Conflict System</h3>
+        <p>
+          Conflict is managed, not avoided.  
+          Disagreements are resolved without humiliation or fear.
+        </p>
+
+        <h3>5. Care & Well-Being System</h3>
+        <p>
+          Emotional and physical health are treated as maintenance, not emergencies.
+        </p>
+
+        <h3>6. Leadership System</h3>
+        <p>
+          Someone holds responsibility for direction.  
+          Leadership is calm, accountable, and consistent.
+        </p>
+
+        <h3>7. Community System</h3>
+        <p>
+          Families stay connected — but not dependent.  
+          Support is reciprocal, not draining.
+        </p>
       </section>
 
       {/* INDEPENDENCE FRAMING */}
-      <section style={{ marginTop: "3rem" }}>
-        <h2>Why Systems Create Independence</h2>
+      <section>
+        <h2>Why Systems Matter More Than Resources</h2>
 
         <p>
-          Support is sometimes necessary — but dependency is not the goal.
-          Families that build systems reduce crisis, regain control, and free
-          up support for others who need it.
+          Resources help in crisis.  
+          Systems prevent repeated crisis.
         </p>
 
         <p>
-          Strong systems turn help into a bridge, not a crutch.
+          Our goal is not to create families who must always return for help —
+          but families who grow stable enough to no longer need it.
         </p>
+
+        <p>
+          When families stabilize:
+        </p>
+
+        <ul>
+          <li>They regain confidence</li>
+          <li>They reduce external dependency</li>
+          <li>They create space for new struggling families</li>
+        </ul>
       </section>
 
       {/* CTA */}
       <section style={{ marginTop: "3rem" }}>
-        <h2>Start Where You Are</h2>
-
         <p>
-          You do not need all seven systems working perfectly. Begin with one.
-          Strength builds through clarity, not urgency.
+          Next steps:
         </p>
 
-        <p>
-          <Link href="/resources">Explore Family Resources →</Link>
-        </p>
-      </section>
-
-      {/* FOOTNOTE */}
-      <section style={{ marginTop: "4rem", opacity: 0.6 }}>
-        <hr />
-        <p style={{ fontSize: "0.9rem" }}>
-          This pillar is part of JERIBW’s Family Systems framework — designed to
-          help families stabilize, grow independent, and make space for others
-          to be helped.
-        </p>
+        <ul>
+          <li>
+            <a href="/pillars/family-leadership">
+              Learn how leadership sustains these systems →
+            </a>
+          </li>
+          <li>
+            <a href="/pillars/the-4ws">
+              Apply the 4Ws framework to design family life →
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
   );

@@ -51,6 +51,7 @@ export default function Header() {
             <Link href="/resources">Resources</Link>
             <Link href="/briefs">Family Briefs</Link>
             <Link href="/help">Help</Link>
+            <Link href="/pillars">Pillars</Link>
           </nav>
         </div>
       </header>

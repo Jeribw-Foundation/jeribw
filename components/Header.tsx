@@ -1,69 +1,15 @@
-import Link from "next/link";
+<header className="bg-jeribw-primary text-white border-b border-jeribw-gold/20">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+    
+    <h1 className="text-2xl font-bold tracking-wide">
+      JERIBW
+    </h1>
 
-export default function Header() {
-  return (
-    <>
-      <header
-        style={{
-          background: "white",
-          boxShadow: "0 1px 2px rgba(0,0,0,.05)",
-          position: "sticky",
-          top: 0,
-          zIndex: 50,
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "72rem",
-            margin: "0 auto",
-            padding: "8px 1.5rem",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          {/* Logo — untouched */}
-          <Link href="/">
-            <img
-              src="/logo/logo.svg"
-              alt="JERIBW"
-              style={{
-                height: "64px",
-                width: "auto",
-                display: "block",
-              }}
-            />
-          </Link>
+    <nav className="space-x-8 text-sm uppercase tracking-wider">
+      <a className="hover:text-jeribw-gold transition">Home</a>
+      <a className="hover:text-jeribw-gold transition">Briefs</a>
+      <a className="hover:text-jeribw-gold transition">Resources</a>
+    </nav>
 
-          {/* Navigation */}
-          <nav
-            className="main-nav"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "1.25rem",
-              marginLeft: "20px",
-              fontSize: "0.95rem",
-              flexWrap: "wrap",
-            }}
-          >
-            <Link href="/briefs/first-family-brief">Latest Brief</Link>
-            <Link href="/start">Start Here</Link>
-            <Link href="/resources">Resources</Link>
-            <Link href="/briefs">Family Briefs</Link>
-            <Link href="/help">Help</Link>
-            <Link href="/pillars">Pillars</Link>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hide links on mobile only */}
-      <style>{`
-        @media (max-width: 640px) {
-          .main-nav {
-            display: none !important;
-          }
-        }
-      `}</style>
-    </>
-  );
-}
+  </div>
+</header>

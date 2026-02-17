@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@fontsource/inter/variable.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -14,21 +15,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "system-ui, sans-serif" }}>
-        <div style={{ minHeight: "100vh" }}>
+      <body className="bg-jeribw-light text-jeribw-darkText font-sans antialiased">
+        
+        <div className="min-h-screen flex flex-col">
 
           {/* FULL WIDTH HEADER */}
           <Header />
 
-          {/* MASTER CONTAINER */}
-          <div className="container">
+          {/* MAIN CONTENT AREA */}
+          <main className="flex-1">
+            <div className="max-w-8xl mx-auto px-6">
+              {children}
+            </div>
+          </main>
 
-            <main>{children}</main>
+          {/* FOOTER */}
+          <Footer />
 
-            <Footer />
-
-          </div>
         </div>
+
       </body>
     </html>
   );

@@ -1,46 +1,57 @@
 export default function Footer() {
   return (
-    <footer
-      style={{
-        marginTop: "4rem",
-        padding: "2rem",
-        borderTop: "1px solid #ddd",
-        fontFamily: "system-ui, sans-serif",
-      }}
-    >
-      <h3>JERIBW FAMILY NEWS</h3>
+    <footer className="mt-16 border-t border-gray-200 bg-white">
+      <div className="max-w-8xl mx-auto px-6 py-10 text-sm text-gray-600">
+        
+        <h3 className="text-lg font-semibold text-jeribw-darkText">
+          JERIBW FAMILY NEWS
+        </h3>
 
-      <p>Calm, verified information for families worldwide.</p>
+        <p className="mt-2">
+          Calm, verified information for families worldwide.
+        </p>
 
-      <p>
-        Contact:{" "}
-        <a href="mailto:family@jeribw.org">family@jeribw.org</a>
-      </p>
+        <p className="mt-2">
+          Contact:{" "}
+          <a
+            href="mailto:family@jeribw.org"
+            className="text-jeribw-primary hover:underline"
+          >
+            family@jeribw.org
+          </a>
+        </p>
 
-      <nav style={{ marginTop: "1rem", marginBottom: "1rem" }}>
-        <a href="/" style={{ marginRight: "1rem" }}>
-          Start Here
-        </a>
+        <nav className="mt-6 flex flex-wrap gap-6 text-sm">
+          <a href="/" className="hover:text-jeribw-primary">
+            Start Here
+          </a>
 
-        <a href="/resources" style={{ marginRight: "1rem" }}>
-          Resources
-        </a>
+          <a href="/resources" className="hover:text-jeribw-primary">
+            Resources
+          </a>
 
-        <a href="/briefs" style={{ marginRight: "1rem" }}>
-          Family Briefs
-        </a>
+          <a href="/briefs" className="hover:text-jeribw-primary">
+            Family Briefs
+          </a>
 
-        <a href="/pillars">Pillars</a>
+          <a href="/pillars" className="hover:text-jeribw-primary">
+            Pillars
+          </a>
 
-        <a href="/help">Help</a>
-      </nav>
+          <a href="/help" className="hover:text-jeribw-primary">
+            Help
+          </a>
+        </nav>
 
-      <p>Region (coming soon)</p>
-      <p>Global</p>
+        <div className="mt-6">
+          <p>Region (coming soon)</p>
+          <p className="font-medium">Global</p>
+        </div>
 
-      <small>
-        © 2026 JERIBW Family News. All rights reserved.
-      </small>
+        <small className="block mt-8 text-gray-400">
+          © 2026 JERIBW Family News. All rights reserved.
+        </small>
+      </div>
     </footer>
   );
 }

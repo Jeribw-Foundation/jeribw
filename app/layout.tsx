@@ -21,22 +21,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-jeribw-light text-jeribw-darkText antialiased`}>
-        
-        <div className="min-h-screen flex flex-col">
+      <body
+        className={`${inter.className} bg-jeribw-light dark:bg-jeribw-primary text-jeribw-darkText dark:text-white antialiased transition-colors duration-300`}
+      >
+        {/* ✅ TAILWIND TEST BLOCK */}
+        <div className="bg-jeribw-primary text-white p-4 text-center">
+        </div>
 
+        <div className="min-h-screen flex flex-col">
           <Header />
 
           <main className="flex-1">
-            <div className="max-w-8xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-6">
               {children}
             </div>
           </main>
 
           <Footer />
-
         </div>
-
       </body>
     </html>
   );

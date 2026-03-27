@@ -1,26 +1,25 @@
 import Link from "next/link";
+import SectionDivider from "@/components/SectionDivider";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="bg-jeribw-light">
 
       {/* ================= HERO ================= */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           
           <div>
             <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
               Helping Families Everywhere Find Stability, Support, and Strength
             </h1>
 
-            <div className="h-1 w-16 bg-jeribw-gold mb-6"></div>
-
-            <p className="text-lg text-gray-700 mb-10">
-              JERIBW Family News filters global events, proven family systems,
-              and verified resources so households can make calm, informed decisions.
+            <p className="text-lg mb-8 text-jeribw-muted">
+              A calm information layer for families worldwide.
+              Verified resources. Practical systems. Clear guidance.
             </p>
 
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4">
               <Link
                 href="/resources"
                 className="bg-jeribw-primary text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
@@ -32,123 +31,135 @@ export default function HomePage() {
                 href="/pillars"
                 className="border border-jeribw-primary text-jeribw-primary px-6 py-3 rounded-lg hover:bg-jeribw-primary hover:text-white transition"
               >
-                Explore The 7 Family Systems
+                Explore Systems
               </Link>
             </div>
           </div>
 
-          {/* HERO IMAGE */}
-          <div className="w-full h-80 bg-gray-200 rounded-2xl shadow-sm" />
+          <div className="h-80 bg-gray-300 rounded-xl" />
         </div>
       </section>
 
 
       {/* ================= START HERE ================= */}
-      <section className="bg-white py-24">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-serif mb-4">
+      <section id="start" className="bg-white py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          
+          <h2 className="text-3xl font-serif">
             Start Here — You’re Not Alone
           </h2>
-          
-          <div className="h-1 w-16 bg-jeribw-gold mb-6"></div>
+          <SectionDivider />
 
-          <p className="text-gray-700 mb-12">
-            If your household feels uncertain or overwhelmed, begin here.
-            Calm structure. Clear steps. No noise.
+          <p className="mb-12 text-jeribw-muted">
+            If you’re overwhelmed, we guide you step by step.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            <Link href="/resources" className="p-6 border rounded-xl hover:shadow-md transition">
-              <h3 className="font-semibold mb-2">I Need Help Now</h3>
-              <p className="text-sm text-gray-600">
-                Food, housing, health, education, legal aid.
-              </p>
-            </Link>
-
-            <Link href="/pillars" className="p-6 border rounded-xl hover:shadow-md transition">
-              <h3 className="font-semibold mb-2">Strengthen My Family</h3>
-              <p className="text-sm text-gray-600">
-                Leadership, stability, independence systems.
-              </p>
-            </Link>
-
-            <Link href="/briefs/first-family-brief" className="p-6 border rounded-xl hover:shadow-md transition">
-              <h3 className="font-semibold mb-2">Read a Family Brief</h3>
-              <p className="text-sm text-gray-600">
-                Calm updates structured for households.
-              </p>
-            </Link>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              "I Need Help Now",
+              "Strengthen My Family",
+              "Community & Connection"
+            ].map((item) => (
+              <div key={item} className="p-6 border rounded-xl hover:shadow-sm transition bg-white">
+                <h3 className="font-semibold mb-2">{item}</h3>
+                <p className="text-sm text-jeribw-muted">
+                  Structured, practical pathways forward.
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
 
-      {/* ================= PILLARS PREVIEW ================= */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* ================= RESOURCES ================= */}
+      <section id="resources" className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-3xl font-serif mb-6 text-center">
-            The 7 Family Systems
+          <h2 className="text-3xl font-serif">
+            Family Resources
           </h2>
+          <SectionDivider />
 
-          <div className="h-1 w-16 bg-jeribw-gold mx-auto mb-6"></div>
-
-          <p className="text-center text-gray-700 max-w-3xl mx-auto mb-16">
-            Families do not stabilize by accident. They stabilize through systems.
-            These are the frameworks households can implement to move from crisis
-            toward independence.
+          <p className="mb-12 text-jeribw-muted">
+            Verified global organizations providing support to families.
           </p>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            {["Leadership", "Stability", "Provision", "Community"].map((item) => (
-              <div key={item} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-                <div className="h-24 bg-gray-200 rounded-xl mb-4" />
-                <h3 className="font-semibold">{item}</h3>
-                <p className="text-sm text-gray-600 mt-2">
-                  Practical structure for daily life.
+          <div className="grid md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="p-6 bg-white rounded-xl shadow-sm">
+                <div className="h-32 bg-gray-300 rounded mb-4" />
+                <h3 className="font-semibold">Organization</h3>
+                <p className="text-sm my-2 text-jeribw-muted">
+                  Clear summary of assistance provided.
                 </p>
+                <Link
+                  href="/resources"
+                  className="text-jeribw-primary text-sm font-medium"
+                >
+                  View Resource →
+                </Link>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mt-16">
-            <Link
-              href="/pillars"
-              className="bg-jeribw-primary text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
-            >
-              Explore All Systems
-            </Link>
+
+      {/* ================= FAMILY SYSTEMS ================= */}
+      <section id="systems" className="bg-white py-24">
+        <div className="max-w-6xl mx-auto px-6">
+
+          <h2 className="text-3xl font-serif">
+            Family Systems
+          </h2>
+          <SectionDivider />
+
+          <p className="mb-12 text-jeribw-muted">
+            Practical frameworks families can implement immediately.
+          </p>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {["Leadership", "Stability", "The 4Ws", "Community"].map((item) => (
+              <div key={item} className="p-6 border rounded-xl bg-white">
+                <div className="h-24 bg-gray-300 rounded mb-4" />
+                <h3 className="font-semibold">{item}</h3>
+                <p className="text-sm mt-2 text-jeribw-muted">
+                  Actionable structure for daily life.
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
 
       {/* ================= COMMUNITY ================= */}
-      <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <section id="community" className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
 
-          <div>
-            <h2 className="text-3xl font-serif mb-6">
-              Families Learning From Families
-            </h2>
+          <h2 className="text-3xl font-serif">
+            Community & Stories
+          </h2>
+          <SectionDivider />
 
-            <div className="h-1 w-16 bg-jeribw-gold mx-auto mb-6"></div>
+          <p className="mb-12 text-jeribw-muted">
+            Families learning from families across the world.
+          </p>
 
-            <p className="text-gray-700 mb-6">
-              Stability is strengthened through shared knowledge.
-              Stories, lessons, and practical wisdom from households
-              across the world.
-            </p>
-
-            <Link
-              href="/briefs"
-              className="text-jeribw-primary font-semibold"
-            >
-              Visit Family Briefs →
-            </Link>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="h-64 bg-gray-300 rounded-xl" />
+            <div className="h-64 bg-gray-300 rounded-xl" />
           </div>
 
-          <div className="h-80 bg-gray-200 rounded-2xl shadow-sm" />
+          <div className="mt-10">
+            <Link
+              href="/briefs"
+              className="bg-jeribw-primary text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
+            >
+              Enter Full Community Platform
+            </Link>
+          </div>
         </div>
       </section>
 

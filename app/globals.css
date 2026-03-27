@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* ===== JERIBW DESIGN SYSTEM (v4 CORRECT WAY) ===== */
+
+:root {
+  --jeribw-primary: #0A1A2F;
+  --jeribw-gold: #C6A75E;
+  --jeribw-light: #F4F6FA;
+  --jeribw-darkText: #0F172A;
+  --jeribw-muted: #64748B;
+  --jeribw-accent: #1E293B;
+}
+
+/* Dark Mode */
+.dark {
+  --jeribw-primary: #0F172A;
+  --jeribw-light: #020617;
+  --jeribw-darkText: #F8FAFC;
+  --jeribw-muted: #94A3B8;
+}
+
+/* Utility mapping (THIS IS THE FIX) */
+@layer utilities {
+  .bg-jeribw-primary {
+    background-color: var(--jeribw-primary);
+  }
+
+  .bg-jeribw-light {
+    background-color: var(--jeribw-light);
+  }
+
+  .text-jeribw-gold {
+    color: var(--jeribw-gold);
+  }
+
+  .text-jeribw-darkText {
+    color: var(--jeribw-darkText);
+  }
+
+  .text-jeribw-muted {
+    color: var(--jeribw-muted);
+  }
+
+  .border-jeribw-gold {
+    border-color: var(--jeribw-gold);
+  }
+}

@@ -5,7 +5,7 @@ export default function Logo({ className }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="JERIBW logo"
-      className={className}
+      className={`h-16 w-auto ${className}`}
     >
       <g fill="none" stroke="currentColor" strokeWidth="8">
         <circle

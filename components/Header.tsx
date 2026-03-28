@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
   return (
@@ -10,35 +11,43 @@ export default function Header() {
 
         {/* LOGO */}
         <Link href="/" className="flex items-center">
-          <Logo className="h-16 w-auto text-white dark:text-jeribw-gold object-contain" />
+          <Logo className="text-white dark:text-jeribw-gold" />
         </Link>
 
-        {/* NAVIGATION */}
-        <nav className="hidden md:flex items-center text-sm font-medium tracking-wide">
+        {/* RIGHT SIDE (NAV + TOGGLE) */}
+        <div className="flex items-center gap-4">
 
-          <Link href="/start" className="px-4 hover:opacity-80 transition">
-            Start Here
-          </Link>
+          {/* NAVIGATION (DESKTOP ONLY) */}
+          <nav className="hidden md:flex items-center text-sm font-medium tracking-wide">
 
-          <span className="h-5 w-px bg-jeribw-gold opacity-80"></span>
+            <Link href="/start" className="px-4 hover:text-jeribw-gold transition">
+              Start Here
+            </Link>
 
-          <Link href="/resources" className="px-4 hover:opacity-80 transition">
-            Resources
-          </Link>
+            <span className="h-5 w-px bg-jeribw-gold opacity-80"></span>
 
-          <span className="h-5 w-px bg-jeribw-gold opacity-80"></span>
+            <Link href="/resources" className="px-4 hover:text-jeribw-gold transition">
+              Resources
+            </Link>
 
-          <Link href="/pillars" className="px-4 hover:opacity-80 transition">
-            Family Systems
-          </Link>
+            <span className="h-5 w-px bg-jeribw-gold opacity-80"></span>
 
-          <span className="h-5 w-px bg-jeribw-gold opacity-80"></span>
+            <Link href="/pillars" className="px-4 hover:text-jeribw-gold transition">
+              Family Systems
+            </Link>
 
-          <Link href="/briefs" className="px-4 hover:opacity-80 transition">
-            Community
-          </Link>
+            <span className="h-5 w-px bg-jeribw-gold opacity-80"></span>
 
-        </nav>
+            <Link href="/briefs" className="px-4 hover:text-jeribw-gold transition">
+              Community
+            </Link>
+
+          </nav>
+
+          {/* THEME TOGGLE (VISIBLE EVERYWHERE) */}
+          <ThemeToggle />
+
+        </div>
 
       </div>
     </header>

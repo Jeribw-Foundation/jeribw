@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { CrisisProvider } from "@/context/CrisisContext";
+import CrisisBanner from "@/components/CrisisBanner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,21 +26,27 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-jeribw-light dark:bg-jeribw-primary text-jeribw-darkText dark:text-white antialiased transition-colors duration-300`}
       >
-        {/* ✅ TAILWIND TEST BLOCK */}
-        <div className="bg-jeribw-primary text-white p-4 text-center">
-        </div>
+        <CrisisProvider>
+          <div className="min-h-screen flex flex-col">
 
-        <div className="min-h-screen flex flex-col">
-          <Header />
+            {/* 🚨 GLOBAL CRISIS BANNER */}
+            <CrisisBanner />
 
-          <main className="flex-1">
-            <div className="max-w-7xl mx-auto px-6">
-              {children}
-            </div>
-          </main>
+            {/* HEADER */}
+            <Header />
 
-          <Footer />
-        </div>
+            {/* MAIN CONTENT */}
+            <main className="flex-1">
+              <div className="max-w-7xl mx-auto px-6">
+                {children}
+              </div>
+            </main>
+
+            {/* FOOTER */}
+            <Footer />
+
+          </div>
+        </CrisisProvider>
       </body>
     </html>
   );

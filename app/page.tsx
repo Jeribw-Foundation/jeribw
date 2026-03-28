@@ -1,7 +1,19 @@
+"use client";
+import { useEffect } from "react";
+import { useCrisis } from "@/context/CrisisContext";
 import Link from "next/link";
 import SectionDivider from "@/components/SectionDivider";
 
 export default function HomePage() {
+  const { setCrisis } = useCrisis();
+
+  useEffect(() => {
+    setCrisis({
+      active: true,
+      message: "Emergency food support needed in multiple regions",
+    });
+  }, []);
+
   return (
     <div className="bg-jeribw-light">
 

@@ -1,22 +1,25 @@
-export default function Logo({ className }: { className?: string }) {
+export default function Logo({ isDark }: { isDark?: boolean }) {
+  const color = isDark ? "#C6A75E" : "#FFFFFF";
+
   return (
     <svg
       viewBox="0 0 320 120"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="JERIBW logo"
-      className={`h-16 w-auto ${className}`}
+      className="h-14 w-auto"
     >
-      <g fill="none" stroke="currentColor" strokeWidth="8">
-        <circle
-          cx="60"
-          cy="60"
-          r="48"
-          strokeLinecap="round"
-          strokeDasharray="260 40"
-          strokeDashoffset="20"
-        />
-      </g>
+      <circle
+        cx="60"
+        cy="60"
+        r="48"
+        fill="none"
+        stroke={color}
+        strokeWidth="8"
+        strokeLinecap="round"
+        strokeDasharray="260 40"
+        strokeDashoffset="20"
+      />
 
       <text
         x="130"
@@ -24,7 +27,7 @@ export default function Logo({ className }: { className?: string }) {
         fontSize="40"
         fontFamily="Inter, Helvetica, Arial, sans-serif"
         letterSpacing="6"
-        fill="currentColor"
+        fill={color}
       >
         JERIBW
       </text>

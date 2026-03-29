@@ -3,28 +3,33 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    if (stored === "dark") {
-      document.documentElement.classList.add("dark");
-      setDark(true);
-    }
+    setMounted(true);
   }, []);
 
   const toggleTheme = () => {
-    const isDark = document.documentElement.classList.toggle("dark");
-    setDark(isDark);
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    const html = document.documentElement;
+
+    if (html.classList.contains("dark")) {
+      html.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      html.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
   };
+
+  // Prevent hydration mismatch
+  if (!mounted) return null;
 
   return (
     <button
-  onClick={toggleTheme}
-  className="border border-jeribw-gold px-4 py-2 rounded-lg text-sm font-medium tracking-wide hover:bg-jeribw-gold hover:text-black transition"
->
-  {dark ? "Light Mode" : "Dark Mode"}
-</button>
+      onClick={toggleTheme}
+      className="ml-4 text-sm border border-jeribw-gold px-3 py-1 rounded hover:opacity-80 transition"
+    >
+      Theme
+    </button>
   );
 }

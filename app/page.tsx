@@ -15,14 +15,14 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="bg-jeribw-light">
+    <div className="bg-jeribw-light dark:bg-jeribw-primary transition-colors">
 
       {/* ================= HERO ================= */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           
           <div>
-            <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-6 text-jeribw-darkText dark:text-white">
               Helping Families Everywhere Find Stability, Support, and Strength
             </h1>
 
@@ -48,16 +48,16 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="h-80 bg-gray-300 rounded-xl" />
+          <div className="h-80 bg-gray-300 dark:bg-gray-700 rounded-xl" />
         </div>
       </section>
 
 
       {/* ================= START HERE ================= */}
-      <section id="start" className="bg-white py-24">
+      <section id="start" className="bg-white dark:bg-jeribw-accent py-24 transition-colors">
         <div className="max-w-6xl mx-auto px-6">
           
-          <h2 className="text-3xl font-serif">
+          <h2 className="text-3xl font-serif text-jeribw-darkText dark:text-white">
             Start Here — You’re Not Alone
           </h2>
           <SectionDivider />
@@ -68,17 +68,22 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              "I Need Help Now",
-              "Strengthen My Family",
-              "Community & Connection"
-            ].map((item) => (
-              <div key={item} className="p-6 border rounded-xl hover:shadow-sm transition bg-white">
-                <h3 className="font-semibold mb-2">{item}</h3>
-                <p className="text-sm text-jeribw-muted">
-                  Structured, practical pathways forward.
-                </p>
-              </div>
-            ))}
+  "I Need Help Now",
+  "Strengthen My Family",
+  "Community & Connection"
+].map((item) => (
+  <div
+    key={item}
+    className="p-6 rounded-xl border border-gray-200 bg-white text-jeribw-darkText dark:!text-jeribw-darkText"
+  >
+    <h3 className="font-semibold text-jeribw-darkText dark:!text-jeribw-darkText">
+      {item}
+    </h3>
+    <p className="text-sm text-jeribw-muted mt-2">
+      Structured, practical pathways forward.
+    </p>
+  </div>
+))}
           </div>
         </div>
       </section>
@@ -88,7 +93,7 @@ export default function HomePage() {
       <section id="resources" className="py-24">
         <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-3xl font-serif">
+          <h2 className="text-3xl font-serif text-jeribw-darkText dark:text-white">
             Family Resources
           </h2>
           <SectionDivider />
@@ -99,19 +104,27 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[1, 2, 3].map((item) => (
-              <div key={item} className="p-6 bg-white rounded-xl shadow-sm">
-                <div className="h-32 bg-gray-300 rounded mb-4" />
-                <h3 className="font-semibold">Organization</h3>
-                <p className="text-sm my-2 text-jeribw-muted">
-                  Clear summary of assistance provided.
-                </p>
-                <Link
-                  href="/resources"
-                  className="text-jeribw-primary text-sm font-medium"
-                >
-                  View Resource →
-                </Link>
-              </div>
+              <div
+  key={item}
+  className="p-6 rounded-xl shadow-sm bg-white text-jeribw-darkText dark:!text-jeribw-darkText"
+>
+  <div className="h-32 bg-gray-300 rounded mb-4" />
+  
+  <h3 className="font-semibold text-jeribw-darkText dark:!text-jeribw-darkText">
+    Organization
+  </h3>
+
+  <p className="text-sm my-2 text-jeribw-muted">
+    Clear summary of assistance provided.
+  </p>
+
+  <Link
+    href="/resources"
+    className="text-jeribw-primary dark:!text-jeribw-primary text-sm font-medium hover:underline"
+  >
+    View Resource →
+  </Link>
+</div>
             ))}
           </div>
         </div>
@@ -119,10 +132,10 @@ export default function HomePage() {
 
 
       {/* ================= FAMILY SYSTEMS ================= */}
-      <section id="systems" className="bg-white py-24">
+      <section id="systems" className="bg-white dark:bg-jeribw-accent py-24 transition-colors">
         <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-3xl font-serif">
+          <h2 className="text-3xl font-serif text-jeribw-darkText dark:text-white">
             Family Systems
           </h2>
           <SectionDivider />
@@ -133,13 +146,20 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {["Leadership", "Stability", "The 4Ws", "Community"].map((item) => (
-              <div key={item} className="p-6 border rounded-xl bg-white">
-                <div className="h-24 bg-gray-300 rounded mb-4" />
-                <h3 className="font-semibold">{item}</h3>
-                <p className="text-sm mt-2 text-jeribw-muted">
-                  Actionable structure for daily life.
-                </p>
-              </div>
+              <div
+  key={item}
+  className="p-6 rounded-xl border border-gray-200 bg-white text-jeribw-darkText dark:!text-jeribw-darkText"
+>
+  <div className="h-24 bg-gray-300 rounded mb-4" />
+  
+  <h3 className="font-semibold text-jeribw-darkText dark:!text-jeribw-darkText">
+    {item}
+  </h3>
+
+  <p className="text-sm mt-2 text-jeribw-muted">
+    Actionable structure for daily life.
+  </p>
+</div>
             ))}
           </div>
         </div>
@@ -150,7 +170,7 @@ export default function HomePage() {
       <section id="community" className="py-24">
         <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-3xl font-serif">
+          <h2 className="text-3xl font-serif text-jeribw-darkText dark:text-white">
             Community & Stories
           </h2>
           <SectionDivider />
@@ -160,8 +180,8 @@ export default function HomePage() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="h-64 bg-gray-300 rounded-xl" />
-            <div className="h-64 bg-gray-300 rounded-xl" />
+            <div className="h-64 bg-gray-300 dark:bg-gray-700 rounded-xl" />
+            <div className="h-64 bg-gray-300 dark:bg-gray-700 rounded-xl" />
           </div>
 
           <div className="mt-10">

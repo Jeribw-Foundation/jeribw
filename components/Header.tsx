@@ -3,18 +3,37 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+
+    checkTheme();
+
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header className="bg-jeribw-primary text-white sticky top-0 z-50 border-b-4 border-jeribw-gold">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
         {/* LOGO */}
         <Link href="/" className="flex items-center">
-          <Logo className="text-white dark:text-jeribw-gold" />
+          <Logo isDark={isDark} />
         </Link>
 
-        {/* RIGHT SIDE (NAV + TOGGLE) */}
+        {/* RIGHT SIDE */}
         <div className="flex items-center gap-4">
 
           {/* NAVIGATION (DESKTOP ONLY) */}
@@ -44,11 +63,10 @@ export default function Header() {
 
           </nav>
 
-          {/* THEME TOGGLE (VISIBLE EVERYWHERE) */}
+          {/* THEME TOGGLE (ALWAYS VISIBLE) */}
           <ThemeToggle />
 
         </div>
-
       </div>
     </header>
   );

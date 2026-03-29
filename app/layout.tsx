@@ -22,7 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+    
       <body
         className={`${inter.className} bg-jeribw-light dark:bg-jeribw-primary text-jeribw-darkText dark:text-white antialiased transition-colors duration-300`}
       >
@@ -41,6 +42,19 @@ export default function RootLayout({
                 {children}
               </div>
             </main>
+
+            <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      try {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    `,
+  }}
+/>
 
             {/* FOOTER */}
             <Footer />
